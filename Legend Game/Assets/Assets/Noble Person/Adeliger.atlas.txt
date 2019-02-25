@@ -1,0 +1,174 @@
+
+Adeliger.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Adeliger/Blasenpunkt1
+  rotate: true
+  xy: 296, 781
+  size: 62, 61
+  orig: 64, 63
+  offset: 1, 1
+  index: -1
+Adeliger/Blasenpunkt2
+  rotate: false
+  xy: 1592, 1738
+  size: 86, 85
+  orig: 88, 87
+  offset: 1, 1
+  index: -1
+Adeliger/Body
+  rotate: false
+  xy: 2, 1303
+  size: 355, 706
+  orig: 355, 706
+  offset: 0, 0
+  index: -1
+Adeliger/Bogen
+  rotate: false
+  xy: 359, 1412
+  size: 181, 597
+  orig: 183, 599
+  offset: 1, 1
+  index: -1
+Adeliger/Denkblase
+  rotate: false
+  xy: 542, 1713
+  size: 441, 296
+  orig: 443, 298
+  offset: 1, 1
+  index: -1
+Adeliger/Fragezeichen1
+  rotate: true
+  xy: 359, 1323
+  size: 87, 187
+  orig: 89, 189
+  offset: 1, 1
+  index: -1
+Adeliger/Fragezeichen2
+  rotate: true
+  xy: 669, 1356
+  size: 71, 127
+  orig: 73, 129
+  offset: 1, 1
+  index: -1
+Adeliger/Fragezeichen3
+  rotate: false
+  xy: 2, 2
+  size: 66, 141
+  orig: 68, 143
+  offset: 1, 1
+  index: -1
+Adeliger/Head
+  rotate: false
+  xy: 985, 1697
+  size: 303, 292
+  orig: 305, 294
+  offset: 1, 1
+  index: -1
+Adeliger/Hut
+  rotate: true
+  xy: 111, 845
+  size: 456, 240
+  orig: 458, 242
+  offset: 1, 1
+  index: -1
+Adeliger/LEER
+  rotate: false
+  xy: 933, 1710
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Adeliger/Left Foot
+  rotate: false
+  xy: 1726, 1870
+  size: 158, 139
+  orig: 160, 141
+  offset: 1, 1
+  index: -1
+Adeliger/Left Hand
+  rotate: true
+  xy: 798, 1345
+  size: 82, 90
+  orig: 84, 92
+  offset: 1, 1
+  index: -1
+Adeliger/Left Lower Arm
+  rotate: false
+  xy: 1592, 1825
+  size: 132, 184
+  orig: 164, 356
+  offset: 32, 0
+  index: -1
+Adeliger/Left Upper Arm
+  rotate: false
+  xy: 1290, 1735
+  size: 162, 254
+  orig: 164, 256
+  offset: 1, 1
+  index: -1
+Adeliger/Muschel
+  rotate: false
+  xy: 1886, 1880
+  size: 117, 129
+  orig: 119, 131
+  offset: 1, 1
+  index: -1
+Adeliger/Pfeil
+  rotate: true
+  xy: 2, 145
+  size: 296, 67
+  orig: 298, 69
+  offset: 1, 1
+  index: -1
+Adeliger/Right Foot
+  rotate: true
+  xy: 111, 441
+  size: 159, 160
+  orig: 161, 162
+  offset: 1, 1
+  index: -1
+Adeliger/Right Hand
+  rotate: true
+  xy: 548, 1331
+  size: 96, 119
+  orig: 98, 121
+  offset: 1, 1
+  index: -1
+Adeliger/Right Lower Arm
+  rotate: false
+  xy: 1454, 1761
+  size: 136, 228
+  orig: 138, 230
+  offset: 1, 1
+  index: -1
+Adeliger/Right Upper Arm
+  rotate: false
+  xy: 111, 602
+  size: 183, 241
+  orig: 185, 243
+  offset: 1, 1
+  index: -1
+Adeliger/Sehne
+  rotate: true
+  xy: 985, 1991
+  size: 18, 594
+  orig: 18, 594
+  offset: 0, 0
+  index: -1
+Adeliger/Stab
+  rotate: false
+  xy: 2, 443
+  size: 107, 858
+  orig: 109, 860
+  offset: 1, 1
+  index: -1
+Adeliger/ThroatChest
+  rotate: true
+  xy: 542, 1429
+  size: 282, 389
+  orig: 282, 389
+  offset: 0, 0
+  index: -1

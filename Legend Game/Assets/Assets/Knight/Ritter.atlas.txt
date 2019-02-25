@@ -1,0 +1,174 @@
+
+Ritter.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Blasenpunkt1
+  rotate: false
+  xy: 714, 1463
+  size: 62, 61
+  orig: 64, 63
+  offset: 1, 1
+  index: -1
+Blasenpunkt2
+  rotate: false
+  xy: 22, 535
+  size: 86, 85
+  orig: 88, 87
+  offset: 1, 1
+  index: -1
+Body
+  rotate: false
+  xy: 111, 1425
+  size: 303, 580
+  orig: 303, 580
+  offset: 0, 0
+  index: -1
+Bogen
+  rotate: true
+  xy: 416, 1824
+  size: 181, 597
+  orig: 183, 599
+  offset: 1, 1
+  index: -1
+Denkblase
+  rotate: false
+  xy: 416, 1526
+  size: 441, 296
+  orig: 443, 298
+  offset: 1, 1
+  index: -1
+Fragezeichen1
+  rotate: false
+  xy: 22, 958
+  size: 87, 187
+  orig: 89, 189
+  offset: 1, 1
+  index: -1
+Fragezeichen2
+  rotate: false
+  xy: 1389, 1636
+  size: 71, 127
+  orig: 73, 129
+  offset: 1, 1
+  index: -1
+Fragezeichen3
+  rotate: true
+  xy: 1473, 1773
+  size: 66, 141
+  orig: 68, 143
+  offset: 1, 1
+  index: -1
+Head
+  rotate: true
+  xy: 111, 1121
+  size: 302, 334
+  orig: 304, 336
+  offset: 1, 1
+  index: -1
+Hut
+  rotate: false
+  xy: 1015, 1765
+  size: 456, 240
+  orig: 458, 242
+  offset: 1, 1
+  index: -1
+LEER
+  rotate: false
+  xy: 859, 1564
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Left Hand
+  rotate: false
+  xy: 22, 717
+  size: 77, 106
+  orig: 79, 108
+  offset: 1, 1
+  index: -1
+Left Leg
+  rotate: true
+  xy: 995, 1590
+  size: 173, 291
+  orig: 175, 293
+  offset: 1, 1
+  index: -1
+Left Lower Arm
+  rotate: true
+  xy: 230, 1025
+  size: 94, 148
+  orig: 96, 150
+  offset: 1, 1
+  index: -1
+Left Shoulder
+  rotate: false
+  xy: 22, 825
+  size: 80, 131
+  orig: 82, 133
+  offset: 1, 1
+  index: -1
+Left Upper Arm
+  rotate: true
+  xy: 1794, 1899
+  size: 106, 213
+  orig: 108, 215
+  offset: 1, 1
+  index: -1
+Muschel
+  rotate: false
+  xy: 111, 990
+  size: 117, 129
+  orig: 119, 131
+  offset: 1, 1
+  index: -1
+Pfeil
+  rotate: false
+  xy: 416, 1457
+  size: 296, 67
+  orig: 298, 69
+  offset: 1, 1
+  index: -1
+Right Hand
+  rotate: false
+  xy: 22, 622
+  size: 87, 93
+  orig: 89, 95
+  offset: 1, 1
+  index: -1
+Right Leg
+  rotate: true
+  xy: 1473, 1841
+  size: 164, 319
+  orig: 166, 321
+  offset: 1, 1
+  index: -1
+Right Lower Arm
+  rotate: false
+  xy: 1288, 1595
+  size: 99, 168
+  orig: 101, 170
+  offset: 1, 1
+  index: -1
+Right Upper Arm
+  rotate: false
+  xy: 859, 1567
+  size: 134, 255
+  orig: 136, 257
+  offset: 1, 1
+  index: -1
+Sehne
+  rotate: false
+  xy: 2, 551
+  size: 18, 594
+  orig: 18, 594
+  offset: 0, 0
+  index: -1
+Stab
+  rotate: false
+  xy: 2, 1147
+  size: 107, 858
+  orig: 109, 860
+  offset: 1, 1
+  index: -1

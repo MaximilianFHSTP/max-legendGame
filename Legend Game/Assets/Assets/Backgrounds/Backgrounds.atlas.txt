@@ -1,0 +1,52 @@
+
+Backgrounds.png
+size: 4096,4096
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BG-Heiter
+  rotate: false
+  xy: 2, 324
+  size: 2484, 2160
+  orig: 2486, 2162
+  offset: 1, 1
+  index: -1
+
+Backgrounds2.png
+size: 4096,4096
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Empty
+  rotate: false
+  xy: 2, 324
+  size: 2484, 2160
+  orig: 2484, 2160
+  offset: 0, 0
+  index: -1
+
+Backgrounds3.png
+size: 4096,4096
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BG-Windig
+  rotate: false
+  xy: 2, 324
+  size: 2484, 2160
+  orig: 2486, 2162
+  offset: 1, 1
+  index: -1
+
+Backgrounds4.png
+size: 4096,4096
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BG-Winterlich Kalt
+  rotate: false
+  xy: 2, 324
+  size: 2484, 2160
+  orig: 2486, 2162
+  offset: 1, 1
+  index: -1

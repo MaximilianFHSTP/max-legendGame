@@ -1,0 +1,83 @@
+
+Horse.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Back Lower Leg
+  rotate: true
+  xy: 333, 766
+  size: 254, 291
+  orig: 254, 291
+  offset: 0, 0
+  index: -1
+Back Upper Leg
+  rotate: true
+  xy: 954, 1683
+  size: 275, 583
+  orig: 275, 583
+  offset: 0, 0
+  index: -1
+Body
+  rotate: false
+  xy: 2, 1527
+  size: 950, 431
+  orig: 950, 431
+  offset: 0, 0
+  index: -1
+Ear
+  rotate: false
+  xy: 626, 814
+  size: 131, 206
+  orig: 133, 208
+  offset: 1, 1
+  index: -1
+Front Hoof
+  rotate: true
+  xy: 954, 1537
+  size: 144, 249
+  orig: 146, 251
+  offset: 1, 1
+  index: -1
+Head
+  rotate: false
+  xy: 1539, 1616
+  size: 421, 342
+  orig: 423, 344
+  offset: 1, 1
+  index: -1
+Mane
+  rotate: false
+  xy: 2, 330
+  size: 311, 510
+  orig: 315, 519
+  offset: 4, 9
+  index: -1
+Shoulder
+  rotate: false
+  xy: 770, 1011
+  size: 302, 514
+  orig: 302, 514
+  offset: 0, 0
+  index: -1
+Tail
+  rotate: false
+  xy: 2, 842
+  size: 329, 683
+  orig: 332, 683
+  offset: 3, 0
+  index: -1
+Throat
+  rotate: false
+  xy: 333, 1022
+  size: 435, 503
+  orig: 435, 503
+  offset: 0, 0
+  index: -1
+Upper Arm
+  rotate: false
+  xy: 2, 6
+  size: 280, 322
+  orig: 280, 322
+  offset: 0, 0
+  index: -1

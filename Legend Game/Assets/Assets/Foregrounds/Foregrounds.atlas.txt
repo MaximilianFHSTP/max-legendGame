@@ -1,0 +1,46 @@
+
+Foregrounds.png
+size: 4096,4096
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+LEER
+  rotate: false
+  xy: 2, 321
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+VG-Heiter
+  rotate: false
+  xy: 2, 324
+  size: 2484, 2160
+  orig: 2486, 2162
+  offset: 1, 1
+  index: -1
+
+Foregrounds2.png
+size: 4096,4096
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+VG-Windig
+  rotate: false
+  xy: 2, 324
+  size: 2484, 2160
+  orig: 2486, 2162
+  offset: 1, 1
+  index: -1
+
+Foregrounds3.png
+size: 4096,4096
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+VG-Winterlich Kalt
+  rotate: false
+  xy: 2, 324
+  size: 2484, 2160
+  orig: 2486, 2162
+  offset: 1, 1
+  index: -1

@@ -1,0 +1,62 @@
+
+Bird Big.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Buntspecht/Body
+  rotate: false
+  xy: 2, 291
+  size: 162, 146
+  orig: 164, 148
+  offset: 1, 1
+  index: -1
+Buntspecht/Feet
+  rotate: false
+  xy: 2, 2
+  size: 64, 42
+  orig: 66, 44
+  offset: 1, 1
+  index: -1
+Buntspecht/Head
+  rotate: false
+  xy: 166, 279
+  size: 96, 61
+  orig: 98, 63
+  offset: 1, 1
+  index: -1
+Buntspecht/Wing
+  rotate: false
+  xy: 166, 342
+  size: 104, 95
+  orig: 106, 97
+  offset: 1, 1
+  index: -1
+Eichelhaeher/Body
+  rotate: false
+  xy: 2, 143
+  size: 162, 146
+  orig: 164, 148
+  offset: 1, 1
+  index: -1
+Eichelhaeher/Feet
+  rotate: true
+  xy: 108, 77
+  size: 64, 42
+  orig: 66, 44
+  offset: 1, 1
+  index: -1
+Eichelhaeher/Head
+  rotate: false
+  xy: 272, 376
+  size: 96, 61
+  orig: 98, 63
+  offset: 1, 1
+  index: -1
+Eichelhaeher/Wing
+  rotate: false
+  xy: 2, 46
+  size: 104, 95
+  orig: 106, 97
+  offset: 1, 1
+  index: -1

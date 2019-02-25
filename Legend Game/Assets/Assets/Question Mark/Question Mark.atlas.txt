@@ -1,0 +1,27 @@
+
+Question Mark.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Fragezeichen1
+  rotate: false
+  xy: 2, 41
+  size: 87, 187
+  orig: 89, 189
+  offset: 1, 1
+  index: -1
+Fragezeichen2
+  rotate: false
+  xy: 159, 101
+  size: 71, 127
+  orig: 73, 129
+  offset: 1, 1
+  index: -1
+Fragezeichen3
+  rotate: false
+  xy: 91, 87
+  size: 66, 141
+  orig: 68, 143
+  offset: 1, 1
+  index: -1

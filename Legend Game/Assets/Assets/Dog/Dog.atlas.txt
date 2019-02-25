@@ -1,0 +1,195 @@
+
+Dog.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Back Lower Leg_Black
+  rotate: false
+  xy: 200, 34
+  size: 117, 116
+  orig: 117, 116
+  offset: 0, 0
+  index: -1
+Back Lower Leg_Lightbrown
+  rotate: false
+  xy: 556, 89
+  size: 117, 116
+  orig: 117, 116
+  offset: 0, 0
+  index: -1
+Back Lower Leg_Spotted
+  rotate: false
+  xy: 319, 6
+  size: 117, 116
+  orig: 117, 116
+  offset: 0, 0
+  index: -1
+Back Upper Leg_Black
+  rotate: false
+  xy: 200, 152
+  size: 124, 260
+  orig: 124, 260
+  offset: 0, 0
+  index: -1
+Back Upper Leg_Lightbrown
+  rotate: false
+  xy: 346, 395
+  size: 124, 260
+  orig: 124, 260
+  offset: 0, 0
+  index: -1
+Back Upper Leg_Spotted
+  rotate: false
+  xy: 472, 430
+  size: 124, 260
+  orig: 124, 260
+  offset: 0, 0
+  index: -1
+Body_Black
+  rotate: false
+  xy: 2, 838
+  size: 386, 179
+  orig: 386, 179
+  offset: 0, 0
+  index: -1
+Body_Lightbrown
+  rotate: false
+  xy: 2, 657
+  size: 386, 179
+  orig: 386, 179
+  offset: 0, 0
+  index: -1
+Body_Spotted
+  rotate: false
+  xy: 390, 838
+  size: 386, 179
+  orig: 386, 179
+  offset: 0, 0
+  index: -1
+Ear_Black
+  rotate: true
+  xy: 713, 421
+  size: 73, 100
+  orig: 75, 102
+  offset: 1, 1
+  index: -1
+Ear_Lightbrown
+  rotate: false
+  xy: 438, 22
+  size: 73, 100
+  orig: 75, 102
+  offset: 1, 1
+  index: -1
+Ear_Spotted
+  rotate: true
+  xy: 834, 456
+  size: 73, 100
+  orig: 75, 102
+  offset: 1, 1
+  index: -1
+Front Lower Arm_Black
+  rotate: true
+  xy: 633, 710
+  size: 126, 186
+  orig: 126, 186
+  offset: 0, 0
+  index: -1
+Front Lower Arm_Lightbrown
+  rotate: true
+  xy: 821, 745
+  size: 126, 186
+  orig: 126, 186
+  offset: 0, 0
+  index: -1
+Front Lower Arm_Spotted
+  rotate: false
+  xy: 677, 233
+  size: 126, 186
+  orig: 126, 186
+  offset: 0, 0
+  index: -1
+Front Upper Arm_Black
+  rotate: false
+  xy: 713, 496
+  size: 119, 212
+  orig: 119, 212
+  offset: 0, 0
+  index: -1
+Front Upper Arm_Lightbrown
+  rotate: false
+  xy: 834, 531
+  size: 119, 212
+  orig: 119, 212
+  offset: 0, 0
+  index: -1
+Front Upper Arm_Spotted
+  rotate: false
+  xy: 556, 207
+  size: 119, 212
+  orig: 119, 212
+  offset: 0, 0
+  index: -1
+Head_Black
+  rotate: false
+  xy: 390, 692
+  size: 241, 144
+  orig: 243, 146
+  offset: 1, 1
+  index: -1
+Head_Lightbrown
+  rotate: false
+  xy: 778, 873
+  size: 241, 144
+  orig: 243, 146
+  offset: 1, 1
+  index: -1
+Head_Spotted
+  rotate: true
+  xy: 200, 414
+  size: 241, 144
+  orig: 243, 146
+  offset: 1, 1
+  index: -1
+Tail_Black
+  rotate: true
+  xy: 326, 124
+  size: 269, 113
+  orig: 269, 113
+  offset: 0, 0
+  index: -1
+Tail_Lightbrown
+  rotate: true
+  xy: 441, 124
+  size: 269, 113
+  orig: 269, 113
+  offset: 0, 0
+  index: -1
+Tail_Spotted
+  rotate: true
+  xy: 598, 421
+  size: 269, 113
+  orig: 269, 113
+  offset: 0, 0
+  index: -1
+Throat_Black
+  rotate: false
+  xy: 2, 445
+  size: 196, 210
+  orig: 196, 210
+  offset: 0, 0
+  index: -1
+Throat_Lightbrown
+  rotate: false
+  xy: 2, 233
+  size: 196, 210
+  orig: 196, 210
+  offset: 0, 0
+  index: -1
+Throat_Spotted
+  rotate: false
+  xy: 2, 21
+  size: 196, 210
+  orig: 196, 210
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,83 @@
+
+Bewohner.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Bewohner/Body
+  rotate: false
+  xy: 2, 296
+  size: 355, 706
+  orig: 355, 706
+  offset: 0, 0
+  index: -1
+Bewohner/Head
+  rotate: false
+  xy: 2, 2
+  size: 303, 292
+  orig: 305, 294
+  offset: 1, 1
+  index: -1
+Bewohner/Left Foot
+  rotate: true
+  xy: 705, 454
+  size: 158, 139
+  orig: 160, 141
+  offset: 1, 1
+  index: -1
+Bewohner/Left Hand
+  rotate: true
+  xy: 359, 286
+  size: 82, 90
+  orig: 84, 92
+  offset: 1, 1
+  index: -1
+Bewohner/Left Lower Arm
+  rotate: true
+  xy: 643, 614
+  size: 132, 184
+  orig: 164, 356
+  offset: 32, 0
+  index: -1
+Bewohner/Left Upper Arm
+  rotate: false
+  xy: 643, 748
+  size: 162, 254
+  orig: 164, 256
+  offset: 1, 1
+  index: -1
+Bewohner/Right Foot
+  rotate: false
+  xy: 544, 451
+  size: 159, 160
+  orig: 161, 162
+  offset: 1, 1
+  index: -1
+Bewohner/Right Hand
+  rotate: true
+  xy: 544, 353
+  size: 96, 119
+  orig: 98, 121
+  offset: 1, 1
+  index: -1
+Bewohner/Right Lower Arm
+  rotate: false
+  xy: 807, 774
+  size: 136, 228
+  orig: 138, 230
+  offset: 1, 1
+  index: -1
+Bewohner/Right Upper Arm
+  rotate: false
+  xy: 359, 370
+  size: 183, 241
+  orig: 185, 243
+  offset: 1, 1
+  index: -1
+Bewohner/ThroatChest
+  rotate: false
+  xy: 359, 613
+  size: 282, 389
+  orig: 282, 389
+  offset: 0, 0
+  index: -1

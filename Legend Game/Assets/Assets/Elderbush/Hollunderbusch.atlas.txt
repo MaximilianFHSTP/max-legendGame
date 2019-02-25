@@ -1,0 +1,76 @@
+
+Hollunderbusch.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Hollunderstrauch
+  rotate: false
+  xy: 2, 704
+  size: 1113, 1014
+  orig: 1115, 1016
+  offset: 1, 1
+  index: -1
+LEER
+  rotate: false
+  xy: 351, 379
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+Schleier
+  rotate: false
+  xy: 2, 137
+  size: 347, 243
+  orig: 349, 245
+  offset: 1, 1
+  index: -1
+Schleierleuchten
+  rotate: false
+  xy: 2, 382
+  size: 455, 320
+  orig: 457, 322
+  offset: 1, 1
+  index: -1
+Strahl1
+  rotate: false
+  xy: 1117, 1425
+  size: 449, 293
+  orig: 451, 295
+  offset: 1, 1
+  index: -1
+Strahl2
+  rotate: false
+  xy: 459, 396
+  size: 125, 121
+  orig: 127, 123
+  offset: 1, 1
+  index: -1
+Strahl3
+  rotate: false
+  xy: 2, 11
+  size: 198, 124
+  orig: 200, 126
+  offset: 1, 1
+  index: -1
+Strahl4
+  rotate: false
+  xy: 1117, 1164
+  size: 219, 259
+  orig: 221, 261
+  offset: 1, 1
+  index: -1
+Strahl5
+  rotate: false
+  xy: 1568, 1478
+  size: 152, 240
+  orig: 154, 242
+  offset: 1, 1
+  index: -1
+Strahl6
+  rotate: false
+  xy: 459, 519
+  size: 349, 183
+  orig: 351, 185
+  offset: 1, 1
+  index: -1
