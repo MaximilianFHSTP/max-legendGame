@@ -146,7 +146,7 @@ public class UIManager : MonoBehaviour {
                 }
                 else if (VD.currentLanguage.Equals("English"))
                 {
-                    nextButtonText.text = "Back to Start";
+                    nextButtonText.text = "Back to the beginning";
                     currentQuestionText.text = "";
                 }
                 break;
@@ -159,7 +159,7 @@ public class UIManager : MonoBehaviour {
                 else if (VD.currentLanguage.Equals("English"))
                 {
                     nextButtonText.text = "I have...";
-                    currentQuestionText.text = "What do you carry with you?";
+                    currentQuestionText.text = "What are you carrying with you?";
                 }
                 break;
             case 5:
@@ -170,8 +170,8 @@ public class UIManager : MonoBehaviour {
                 }
                 else if (VD.currentLanguage.Equals("English"))
                 {
-                    nextButtonText.text = "There is...";
-                    currentQuestionText.text = "What else is here?";
+                    nextButtonText.text = "There's...";
+                    currentQuestionText.text = "What else is there?";
                 }
                 break;
             case 6:
@@ -182,7 +182,7 @@ public class UIManager : MonoBehaviour {
                 }
                 else if (VD.currentLanguage.Equals("English"))
                 {
-                    nextButtonText.text = "I'd like to...";
+                    nextButtonText.text = "I would like to...";
                     currentQuestionText.text = "What would you like to do?";
                 }
                 break;
@@ -194,7 +194,7 @@ public class UIManager : MonoBehaviour {
                 }
                 else if (VD.currentLanguage.Equals("English"))
                 {
-                    nextButtonText.text = "On second thought...";
+                    nextButtonText.text = "I have something else here:";
                     currentQuestionText.text = "";
                 }
                 break;
@@ -207,7 +207,7 @@ public class UIManager : MonoBehaviour {
                 else if (VD.currentLanguage.Equals("English"))
                 {
                     nextButtonText.text = "I have to...";
-                    currentQuestionText.text = "What do you have to do now?";
+                    currentQuestionText.text = "What will you do?";
                 }
                 break;
             case 9:
@@ -218,7 +218,7 @@ public class UIManager : MonoBehaviour {
                 }
                 else if (VD.currentLanguage.Equals("English"))
                 {
-                    nextButtonText.text = "Then I want to do something else.";
+                    nextButtonText.text = "Then I’d like to do something else.";
                     currentQuestionText.text = "";
                 }
                 break;
@@ -230,7 +230,7 @@ public class UIManager : MonoBehaviour {
                 }
                 else if (VD.currentLanguage.Equals("English"))
                 {
-                    nextButtonText.text = "I want to do something else.";
+                    nextButtonText.text = "I’d like to do something else.";
                     currentQuestionText.text = "";
                 }
                 break;
@@ -254,7 +254,7 @@ public class UIManager : MonoBehaviour {
                 }
                 else if (VD.currentLanguage.Equals("English"))
                 {
-                    nextButtonText.text = "I'd like to...";
+                    nextButtonText.text = "I would like to...";
                     currentQuestionText.text = "What would you like to do?";
                 }
                 break;
@@ -266,8 +266,8 @@ public class UIManager : MonoBehaviour {
                 }
                 else if (VD.currentLanguage.Equals("English"))
                 {
-                    nextButtonText.text = "The weather is...";
-                    currentQuestionText.text = "What is the weather like?";
+                    nextButtonText.text = "It's...";
+                    currentQuestionText.text = "What's the weather like?";
                 }
                 break;
             case 14:
@@ -279,7 +279,7 @@ public class UIManager : MonoBehaviour {
                 else if (VD.currentLanguage.Equals("English"))
                 {
                     nextButtonText.text = "I will...";
-                    currentQuestionText.text = "What will you do now?";
+                    currentQuestionText.text = "What will you do next?";
                 }
                 break;
             case 15:
@@ -314,8 +314,8 @@ public class UIManager : MonoBehaviour {
                 }
                 else if (VD.currentLanguage.Equals("English"))
                 {
-                    nextButtonText.text = "I'm hunting...";
-                    currentQuestionText.text = "Do you hunt alone or with hunting dogs?";
+                    nextButtonText.text = "I’ll hunt…";
+                    currentQuestionText.text = "Will you hunt alone or with your hunting dogs?";
                 }
                 break;
             case 18:
