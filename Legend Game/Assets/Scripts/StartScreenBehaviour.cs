@@ -7,6 +7,7 @@ public class StartScreenBehaviour : MonoBehaviour {
     public GameObject StartScreen;
     public StageManager StageManager;
     public UIManager DialogueManager;
+    public RESTController rest;
 
     public void ToggleStartScreen(bool startScreenVisible)
     {
@@ -20,18 +21,19 @@ public class StartScreenBehaviour : MonoBehaviour {
         }
     }
 
-    public void StartGame(string language)
+    public void StartGame(int language)
     {
         DialogueManager.HandleNextAction();
-        if (language.Equals("German"))
+        if (language == 2)
         {
-            Debug.Log("Language switched to " + language);
-            DialogueManager.ChangeLanguage(language);
-        }else if (language.Equals("English"))
+            Debug.Log("Language switched to German");
+            DialogueManager.ChangeLanguage("German");
+        }else if (language == 1)
         {
-            Debug.Log("Language switched to " + language);
-            DialogueManager.ChangeLanguage(language);
+            Debug.Log("Language switched to English");
+            DialogueManager.ChangeLanguage("English");
         }
+        rest.SetGameRunning(true);
     }
 
     public void ResetGame()

@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
 using REST;
+using UnityEngine.UI;
 
 public class RESTController : MonoBehaviour 
 {
@@ -11,10 +12,19 @@ public class RESTController : MonoBehaviour
 
     public GodUser godUser;
 
+    public Text usernameText;
+
+    public GameObject GameManager;
+
+    private bool gameRunning = false;
+    public void SetGameRunning(bool gameRunning) { this.gameRunning = gameRunning; }
+    private bool appUserActive = false;
+
     void Start()
     {
         StartCoroutine(GetUser(CheckUserStatus));
     }
+
     void Update()
     {
         apiCheckCountdown -= Time.deltaTime;
@@ -45,10 +55,17 @@ public class RESTController : MonoBehaviour
 
     public void CheckUserStatus(GodUser user)
     {
-        // Wenn der user null ist bedeuted das, dass er das Spiel verlassen hat!
-        if (user == null)
+        // Wenn der user null ist bedeutet das, dass er das Spiel verlassen hat!
+        if (user.name == null && user.id == null)
         {
             Debug.Log("No user found");
+
+            //CHECKEN ob ein lokaler User spielt!!
+            GameManager.GetComponent<StartScreenBehaviour>().ToggleStartScreen(true);
+            GameManager.GetComponent<StartScreenBehaviour>().ResetGame();
+
+            usernameText.text = "Gast";
+
             return;
         }
 
@@ -59,6 +76,21 @@ public class RESTController : MonoBehaviour
         Debug.Log("Language: " + user.contentLanguageId);
 
         this.godUser = user;
+        usernameText.text = this.godUser.name;
+
+        if (gameRunning)
+        {
+            //Wenn das Spiel eh schon läuft
+            //Countdown starten für Timeout
+        }
+        else
+        {
+            //Start Screen wegmachen, Spiel starten
+            GameManager.GetComponent<StartScreenBehaviour>().ToggleStartScreen(false);
+            GameManager.GetComponent<StartScreenBehaviour>().StartGame(godUser.contentLanguageId);
+            appUserActive = true;
+        }
+
     }
 
     /*

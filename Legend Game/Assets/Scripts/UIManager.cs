@@ -17,6 +17,8 @@ public class UIManager : MonoBehaviour {
     public GameObject nextQuestionGameObject;
     public Text currentQuestionText;
 
+    public RESTController rest;
+
 
 	// Use this for initialization
 	void Start () {
@@ -64,6 +66,9 @@ public class UIManager : MonoBehaviour {
         VD.OnNodeChange += UpdateUI;
         VD.OnEnd += End;
         VD.BeginDialogue(GetComponent<VIDE_Assign>());
+
+        //Wappenteil Pferd freischalten
+        rest.TransmitUnlockCoaSymbol();
     }
 
     void UpdateUI(VD.NodeData data)
