@@ -33,6 +33,7 @@ public class UIManager : MonoBehaviour {
         ResetDialogue();
         VD.SetCurrentLanguage(language);
         HandleNextAction();
+        rest.ChangeLanguageOfTimeoutScreen(language);
     }
 
     public void ResetDialogue()
@@ -57,6 +58,7 @@ public class UIManager : MonoBehaviour {
         }
         else
         {
+            rest.UserStillHere();
             VD.Next();
         }
     }
@@ -68,7 +70,7 @@ public class UIManager : MonoBehaviour {
         VD.BeginDialogue(GetComponent<VIDE_Assign>());
 
         //Wappenteil Pferd freischalten
-        rest.TransmitUnlockCoaSymbol();
+        StartCoroutine(rest.TransmitUnlockCoaSymbol());
     }
 
     void UpdateUI(VD.NodeData data)

@@ -10,9 +10,9 @@ public class RESTController : MonoBehaviour
     private const float API_CHECK_MAXTIME = 2.0f; //2 Sekunden
     private float apiCheckCountdown = API_CHECK_MAXTIME;
 
-    private const float SECONDS_TO_TIMEOUT = 10f;
+    private const float SECONDS_TO_TIMEOUT = 45f;
     private float checkTimeout = SECONDS_TO_TIMEOUT;
-    private const float SECONDS_TO_KICK = 10f;
+    private const float SECONDS_TO_KICK = 30f;
     private float timeoutKick = SECONDS_TO_KICK;
     public GameObject timeoutCanvas;
     public Text timerHeading;
@@ -29,7 +29,10 @@ public class RESTController : MonoBehaviour
 
     private bool gameRunning = false;
     public void SetGameRunning(bool gameRunning) { this.gameRunning = gameRunning; }
+
     private bool appUserActive = false;
+    private bool localUserActive = false;
+    public void SetLocalUserActive(bool localUserActive) { this.localUserActive = localUserActive; }
 
     void Start()
     {
@@ -53,16 +56,7 @@ public class RESTController : MonoBehaviour
                 if (timeoutKick <= 0)
                 {
                     //User raushauen, alles resetten
-                    gameRunning = false;
-                    appUserActive = false;
-                    checkTimeout = SECONDS_TO_TIMEOUT;
-                    timeoutKick = SECONDS_TO_KICK;
-                    timeoutCanvas.SetActive(false);
-                    GameManager.GetComponent<StartScreenBehaviour>().ToggleStartScreen(true);
-                    GameManager.GetComponent<StartScreenBehaviour>().ResetGame();
-                    usernameText.text = "Gast";
-                    TransmitUserTimedOut();
-                    this.godUser = null;
+                    ResetEverything();
                 }
 
             }
@@ -75,7 +69,33 @@ public class RESTController : MonoBehaviour
             apiCheckCountdown = API_CHECK_MAXTIME;
             StartCoroutine(GetUser(CheckUserStatus));
         }
+
     }
+
+
+    public void ResetEverything()
+    {
+        if (appUserActive)
+        {
+            StartCoroutine(TransmitUserTimedOut());
+        }
+        else if (localUserActive)
+        {
+            StartCoroutine(TransmitLocalUserLeft());
+        }
+
+        gameRunning = false;
+        appUserActive = false;
+        localUserActive = false;
+        checkTimeout = SECONDS_TO_TIMEOUT;
+        timeoutKick = SECONDS_TO_KICK;
+        timeoutCanvas.SetActive(false);
+        GameManager.GetComponent<StartScreenBehaviour>().ToggleStartScreen(true);
+        GameManager.GetComponent<StartScreenBehaviour>().ResetGame();
+        usernameText.text = "Gast";
+        this.godUser = null;
+    }
+
 
     public void UserStillHere()
     {
@@ -104,37 +124,30 @@ public class RESTController : MonoBehaviour
 
     public void CheckUserStatus(GodUser user)
     {
-        Debug.Log(user.name);
 
-        // Wenn der user null ist bedeutet das, dass er das Spiel verlassen hat!
+        // Wenn der User null ist bedeutet das, dass er das Spiel verlassen hat!
         if (user.name == null && user.id == null)
         {
-            Debug.Log("No user found");
+            //Debug.Log("No user found");
             //Wenn vorher ein App User aktiv war und jetzt kein User mehr gefunden wird, ist kein App User mehr da
             if (appUserActive)
             {
-                appUserActive = false;
-                GameManager.GetComponent<StartScreenBehaviour>().ToggleStartScreen(true);
-                GameManager.GetComponent<StartScreenBehaviour>().ResetGame();
-                usernameText.text = "Gast";
+                ResetEverything();
+                return;
             }
 
-            //CHECKEN ob ein lokaler User spielt!!
-
+            //Wenn aber ein lokaler User spielt, mach gar nichts
             return;
 
         }
 
         //USER FOUND
-        Debug.Log("User " + user.name + " found, language " + user.contentLanguageId + ".");
+        //Debug.Log("User " + user.name + " found, language " + user.contentLanguageId + ".");
         this.godUser = user;
         usernameText.text = this.godUser.name;
 
-        if (gameRunning)
-        {
-            //Wenn das Spiel eh schon läuft und ein User wird erkannt (oder ist eben noch da)
-        }
-        else
+        //Wenn das Spiel noch nicht läuft, starte es
+        if (!gameRunning)
         {
             //Start Screen wegmachen, Spiel starten
             GameManager.GetComponent<StartScreenBehaviour>().ToggleStartScreen(false);
@@ -153,6 +166,10 @@ public class RESTController : MonoBehaviour
         {
             yield return req.Send();
         }
+    }
+    public void LocalUserJoin()
+    {
+        StartCoroutine(TransmitLocalUserJoined());
     }
 
     /*
@@ -188,6 +205,11 @@ public class RESTController : MonoBehaviour
             yield return req.Send();
         }
     }
+    public void UnlockCoaHelmet()
+    {
+        //Das Dialog Asset kann nur direkte Methoden aufrufen und keine Coroutinen, daher der Umweg
+        StartCoroutine(TransmitUnlockCoaHelmet());
+    }
 
     /*
     * Ruf diese Methode auf um für den Benutzer das Pferd Symbol freizuschalten
@@ -199,4 +221,24 @@ public class RESTController : MonoBehaviour
             yield return req.Send();
         }
     }
+
+    public void ChangeLanguageOfTimeoutScreen(string language)
+    {
+        if (language.Equals("German"))
+        {
+            timerHeading.text = "Bist du noch da?";
+            timerMessage1.text = "Wenn du noch da bist, berühre bitte den Button. Ansonsten wirst du in";
+            timerMessage2.text = "Sekunden ausgeloggt, damit andere Besucher spielen können!";
+            timerButtonText.text = "Ich bin noch da!";
+        }
+        else if (language.Equals("English"))
+        {
+            timerHeading.text = "Are you still here?";
+            timerMessage1.text = "If you are, please tap the button. Otherwise you will be logged out of the exhibit in";
+            timerMessage2.text = "seconds, so that other visitors can play the game!";
+            timerButtonText.text = "I'm still here!";
+        }
+
+    }
+
 }

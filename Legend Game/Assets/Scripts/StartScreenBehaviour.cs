@@ -36,6 +36,13 @@ public class StartScreenBehaviour : MonoBehaviour {
         rest.SetGameRunning(true);
     }
 
+    public void StartGameAsLocalUser(int language)
+    {
+        rest.SetLocalUserActive(true);
+        rest.LocalUserJoin();
+        StartGame(language);
+    }
+
     public void ResetGame()
     {
         DialogueManager.ResetDialogue();
