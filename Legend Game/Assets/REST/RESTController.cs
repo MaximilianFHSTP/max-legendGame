@@ -7,8 +7,19 @@ using UnityEngine.UI;
 
 public class RESTController : MonoBehaviour 
 {
-    private const float API_CHECK_MAXTIME = 3.0f; //3 Sekunden
+    private const float API_CHECK_MAXTIME = 2.0f; //2 Sekunden
     private float apiCheckCountdown = API_CHECK_MAXTIME;
+
+    private const float SECONDS_TO_TIMEOUT = 10f;
+    private float checkTimeout = SECONDS_TO_TIMEOUT;
+    private const float SECONDS_TO_KICK = 10f;
+    private float timeoutKick = SECONDS_TO_KICK;
+    public GameObject timeoutCanvas;
+    public Text timerHeading;
+    public Text timerMessage1;
+    public Text timerMessage2;
+    public Text timerButtonText;
+    public Text timerText;
 
     public GodUser godUser;
 
@@ -23,10 +34,41 @@ public class RESTController : MonoBehaviour
     void Start()
     {
         StartCoroutine(GetUser(CheckUserStatus));
+        timeoutCanvas.SetActive(false);
     }
 
     void Update()
     {
+        //Wenn das Spiel läuft, starte Timeout Counter
+        if (gameRunning)
+        {
+            checkTimeout -= Time.deltaTime;
+            if (checkTimeout <= 0)
+            {
+                //Timeout Canvas einblenden
+                timeoutCanvas.SetActive(true);
+                timeoutKick -= Time.deltaTime;
+                timerText.text = Mathf.FloorToInt(timeoutKick).ToString();
+
+                if (timeoutKick <= 0)
+                {
+                    //User raushauen, alles resetten
+                    gameRunning = false;
+                    appUserActive = false;
+                    checkTimeout = SECONDS_TO_TIMEOUT;
+                    timeoutKick = SECONDS_TO_KICK;
+                    timeoutCanvas.SetActive(false);
+                    GameManager.GetComponent<StartScreenBehaviour>().ToggleStartScreen(true);
+                    GameManager.GetComponent<StartScreenBehaviour>().ResetGame();
+                    usernameText.text = "Gast";
+                    TransmitUserTimedOut();
+                    this.godUser = null;
+                }
+
+            }
+        }
+
+        //In jedem Fall checke alle 2 Sekunden ob noch ein User da ist
         apiCheckCountdown -= Time.deltaTime;
         if (apiCheckCountdown <= 0)
         {
@@ -35,8 +77,15 @@ public class RESTController : MonoBehaviour
         }
     }
 
+    public void UserStillHere()
+    {
+        timeoutCanvas.SetActive(false);
+        checkTimeout = SECONDS_TO_TIMEOUT;
+        timeoutKick = SECONDS_TO_KICK;
+    }
+
     /*
-     * Diese Methode wird alle 3 Sekunden aufgerufen. Wenn der Benutzer vorher null war und dann nicht mehr ist ein neuer Benutzer beigetreten
+     * Diese Methode wird alle 2 Sekunden aufgerufen. Wenn der Benutzer vorher null war und dann nicht mehr ist ein neuer Benutzer beigetreten
      * Umgekehrt, wenn ein Benutzer plötzlich null ist, hat er das Spiel wieder verlassen
      */
     IEnumerator GetUser(Action<GodUser> onSuccess)
@@ -55,33 +104,35 @@ public class RESTController : MonoBehaviour
 
     public void CheckUserStatus(GodUser user)
     {
+        Debug.Log(user.name);
+
         // Wenn der user null ist bedeutet das, dass er das Spiel verlassen hat!
         if (user.name == null && user.id == null)
         {
             Debug.Log("No user found");
+            //Wenn vorher ein App User aktiv war und jetzt kein User mehr gefunden wird, ist kein App User mehr da
+            if (appUserActive)
+            {
+                appUserActive = false;
+                GameManager.GetComponent<StartScreenBehaviour>().ToggleStartScreen(true);
+                GameManager.GetComponent<StartScreenBehaviour>().ResetGame();
+                usernameText.text = "Gast";
+            }
 
             //CHECKEN ob ein lokaler User spielt!!
-            GameManager.GetComponent<StartScreenBehaviour>().ToggleStartScreen(true);
-            GameManager.GetComponent<StartScreenBehaviour>().ResetGame();
-
-            usernameText.text = "Gast";
 
             return;
+
         }
 
-        // Name des Benutzers
-        Debug.Log("Name: " + user.name);
-
-        // 1 = Englisch, 2 = Deutsch
-        Debug.Log("Language: " + user.contentLanguageId);
-
+        //USER FOUND
+        Debug.Log("User " + user.name + " found, language " + user.contentLanguageId + ".");
         this.godUser = user;
         usernameText.text = this.godUser.name;
 
         if (gameRunning)
         {
-            //Wenn das Spiel eh schon läuft
-            //Countdown starten für Timeout
+            //Wenn das Spiel eh schon läuft und ein User wird erkannt (oder ist eben noch da)
         }
         else
         {
@@ -117,6 +168,7 @@ public class RESTController : MonoBehaviour
 
     /*
      * Ruf diese Methode auf wenn der GoD Benutzer das Timeout erreicht hat (seit x Sekunden nichts mehr gedrückt hat)
+     * Oder wenn er Logout Button gedrückt hat
      */
     public IEnumerator TransmitUserTimedOut()
     {
