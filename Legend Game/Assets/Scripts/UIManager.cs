@@ -17,6 +17,8 @@ public class UIManager : MonoBehaviour {
     public GameObject nextQuestionGameObject;
     public Text currentQuestionText;
 
+    public RESTController rest;
+
 
 	// Use this for initialization
 	void Start () {
@@ -31,6 +33,7 @@ public class UIManager : MonoBehaviour {
         ResetDialogue();
         VD.SetCurrentLanguage(language);
         HandleNextAction();
+        rest.ChangeLanguageOfTimeoutScreen(language);
     }
 
     public void ResetDialogue()
@@ -55,6 +58,7 @@ public class UIManager : MonoBehaviour {
         }
         else
         {
+            rest.UserStillHere();
             VD.Next();
         }
     }
@@ -64,6 +68,9 @@ public class UIManager : MonoBehaviour {
         VD.OnNodeChange += UpdateUI;
         VD.OnEnd += End;
         VD.BeginDialogue(GetComponent<VIDE_Assign>());
+
+        //Wappenteil Pferd freischalten
+        StartCoroutine(rest.TransmitUnlockCoaSymbol());
     }
 
     void UpdateUI(VD.NodeData data)
