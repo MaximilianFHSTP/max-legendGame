@@ -17,12 +17,12 @@ size: 4096,4096
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-Empty
+BG-Windig
   rotate: false
   xy: 2, 324
   size: 2484, 2160
-  orig: 2484, 2160
-  offset: 0, 0
+  orig: 2486, 2162
+  offset: 1, 1
   index: -1
 
 Backgrounds3.png
@@ -30,7 +30,7 @@ size: 4096,4096
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-BG-Windig
+BG-Winterlich Kalt
   rotate: false
   xy: 2, 324
   size: 2484, 2160
@@ -43,7 +43,46 @@ size: 4096,4096
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-BG-Winterlich Kalt
+Empty
+  rotate: false
+  xy: 2, 324
+  size: 2484, 2160
+  orig: 2484, 2160
+  offset: 0, 0
+  index: -1
+
+Backgrounds5.png
+size: 4096,4096
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+HG Lichtung - Heiter
+  rotate: false
+  xy: 2, 324
+  size: 2484, 2160
+  orig: 2486, 2162
+  offset: 1, 1
+  index: -1
+
+Backgrounds6.png
+size: 4096,4096
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+HG Lichtung - Windig
+  rotate: false
+  xy: 2, 324
+  size: 2484, 2160
+  orig: 2486, 2162
+  offset: 1, 1
+  index: -1
+
+Backgrounds7.png
+size: 4096,4096
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+HG Lichtung - Winterlich Kalt
   rotate: false
   xy: 2, 324
   size: 2484, 2160

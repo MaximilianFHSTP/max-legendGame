@@ -51,6 +51,7 @@ public class StageManager : MonoBehaviour {
         GoldenBackground.Play("Invisible");
 
         Backgrounds.GetComponent<SkeletonAnimation>().skeleton.SetSkin("Blank");
+        Foregrounds.GetComponent<SkeletonAnimation>().skeleton.SetSkin("Blank");
 
         Elderbush.GetComponent<SkeletonAnimation>().state.ClearTracks();
         Elderbush.GetComponent<SkeletonAnimation>().skeleton.SetSkin("Ohne Schleier");
@@ -183,6 +184,7 @@ public class StageManager : MonoBehaviour {
                 Debug.Log("Waldhintergrund einblenden");
 
                 Backgrounds.GetComponent<SkeletonAnimation>().skeleton.SetSkin("Wald - Heiter");
+                Foregrounds.GetComponent<SkeletonAnimation>().skeleton.SetSkin("Wald - Heiter");
                 Elderbush.SetActive(true);
 
                 break;
@@ -367,6 +369,7 @@ public class StageManager : MonoBehaviour {
 
                 Debug.Log("Winter Wetter einschalten, Hollunderbusch ausblenden");
                 Backgrounds.GetComponent<SkeletonAnimation>().skeleton.SetSkin("Wald - Winterlich Kalt");
+                Foregrounds.GetComponent<SkeletonAnimation>().skeleton.SetSkin("Wald - Winterlich Kalt");
                 Snow.SetActive(true);
                 Elderbush.SetActive(false);
 
@@ -377,6 +380,7 @@ public class StageManager : MonoBehaviour {
                 Wind1.SetActive(true);
                 Wind2.SetActive(true);
                 Backgrounds.GetComponent<SkeletonAnimation>().skeleton.SetSkin("Wald - Windig");
+                Foregrounds.GetComponent<SkeletonAnimation>().skeleton.SetSkin("Wald - Heiter");
 
                 break;
             case 18:
@@ -455,6 +459,32 @@ public class StageManager : MonoBehaviour {
                 Debug.Log("Fragezeichen-Animation alleine starten");
                 QuestionMark.SetActive(true);
                 QuestionMark.GetComponent<SkeletonAnimation>().state.SetAnimation(0, "QuestionMark", false);
+
+                break;
+            case 23:
+
+                Debug.Log("Lichtung Heiter und Hollunderbusch einblenden");
+                Backgrounds.GetComponent<SkeletonAnimation>().skeleton.SetSkin("Lichtung - Heiter");
+                Foregrounds.GetComponent<SkeletonAnimation>().skeleton.SetSkin("Lichtung - Heiter");
+                Elderbush.SetActive(true);
+
+                break;
+            case 24:
+
+                Debug.Log("Lichtung Winter Wetter einschalten, Hollunderbusch ausblenden");
+                Backgrounds.GetComponent<SkeletonAnimation>().skeleton.SetSkin("Lichtung - Winterlich Kalt");
+                Foregrounds.GetComponent<SkeletonAnimation>().skeleton.SetSkin("Lichtung - Winterlich Kalt");
+                Snow.SetActive(true);
+                Elderbush.SetActive(false);
+
+                break;
+            case 25:
+
+                Debug.Log("Lichtung - Windiges Wetter einschalten");
+                Wind1.SetActive(true);
+                Wind2.SetActive(true);
+                Backgrounds.GetComponent<SkeletonAnimation>().skeleton.SetSkin("Lichtung - Windig");
+                Foregrounds.GetComponent<SkeletonAnimation>().skeleton.SetSkin("Lichtung - Windig");
 
                 break;
         }

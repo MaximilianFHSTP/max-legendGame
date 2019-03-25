@@ -173,12 +173,12 @@ public class UIManager : MonoBehaviour {
                 if (VD.currentLanguage.Equals("German"))
                 {
                     nextButtonText.text = "Hier ist noch...";
-                    currentQuestionText.text = "Was ist noch hier?";
+                    currentQuestionText.text = "Wer oder was ist noch hier?";
                 }
                 else if (VD.currentLanguage.Equals("English"))
                 {
                     nextButtonText.text = "There's...";
-                    currentQuestionText.text = "What else is there?";
+                    currentQuestionText.text = "Who or what else is there?";
                 }
                 break;
             case 6:
